@@ -9,7 +9,7 @@ Selenoid + Node-RED
 $ docker-compose build
 ```
 
-If direnv is installed, ./bin is no longer required (optional)
+If [direnv](https://direnv.net/) is installed, `./bin` is no longer required (optional)
 
 ```
 $ apt install direnv
