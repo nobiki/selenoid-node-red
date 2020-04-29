@@ -1,13 +1,15 @@
 # selenoid-node-red
 Selenoid + Node-RED
 
+![sample.jpg](./sample/sample.jpg)
+
 #### Setup
 
 ```
 $ docker-compose build
 ```
 
-If direnv is installed, it is not necessary to specify `. / bin` (optional)
+If direnv is installed, ./bin is no longer required (optional)
 
 ```
 $ apt install direnv
@@ -32,7 +34,7 @@ Get Configration Manager
 ```
 $ make bin/cm
 
-$ bin/cm version
+$ ./bin/cm version
 Git Revision: 1.7.1
 UTC Build Time: 2019-10-08_05:28:51PM
 ```
@@ -40,8 +42,8 @@ UTC Build Time: 2019-10-08_05:28:51PM
 Start Selenoid
 
 ```
-$ bin/cm selenoid start --vnc
-$ bin/cm selenoid-ui start
+$ ./bin/cm selenoid start --vnc
+$ ./bin/cm selenoid-ui start
 ```
 
 [localhost:8080](http://localhost:8080)

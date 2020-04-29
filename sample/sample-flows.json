@@ -1,0 +1,129 @@
+[
+    {
+        "id": "2af20981.9532f6",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "aa39f5fc.e397b8",
+        "type": "open-web",
+        "z": "2af20981.9532f6",
+        "name": "",
+        "browser": "chrome",
+        "weburl": "https://7me.oji.0j0.jp",
+        "width": 1024,
+        "height": 768,
+        "webtitle": "Google",
+        "timeout": 3000,
+        "maximized": true,
+        "server": "63f32ab1.af75d4",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "f7ca9db4.d0ac9"
+            ]
+        ]
+    },
+    {
+        "id": "22bc9017.01f97",
+        "type": "http in",
+        "z": "2af20981.9532f6",
+        "name": "",
+        "url": "/test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "aa39f5fc.e397b8"
+            ]
+        ]
+    },
+    {
+        "id": "f7ca9db4.d0ac9",
+        "type": "delay",
+        "z": "2af20981.9532f6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "469911e0.9b15f"
+            ]
+        ]
+    },
+    {
+        "id": "9abb0e30.80b58",
+        "type": "close-web",
+        "z": "2af20981.9532f6",
+        "name": "",
+        "waitfor": 500,
+        "x": 430,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "469911e0.9b15f",
+        "type": "click-on",
+        "z": "2af20981.9532f6",
+        "name": "",
+        "selector": "xpath",
+        "target": "/html/body/div/header/div/nav/li[2]/a",
+        "timeout": 1000,
+        "waitfor": 500,
+        "clickon": false,
+        "x": 340,
+        "y": 300,
+        "wires": [
+            [
+                "365a65e0.fb172a"
+            ]
+        ]
+    },
+    {
+        "id": "365a65e0.fb172a",
+        "type": "delay",
+        "z": "2af20981.9532f6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "9abb0e30.80b58"
+            ]
+        ]
+    },
+    {
+        "id": "63f32ab1.af75d4",
+        "type": "selenium-server",
+        "z": "",
+        "remoteurl": "http://localhost:4444/wd/hub"
+    }
+]
