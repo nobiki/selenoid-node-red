@@ -9,6 +9,5 @@ services:
     build:
       context: .
       dockerfile: node-red.Dockerfile
-    ports:
-      - 1880:1880
+    network_mode: "host"
     env_file: .env
