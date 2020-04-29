@@ -1,0 +1,5 @@
+#!/bin/bash -eu
+cd $(dirname `realpath $0`)/../;source .env
+
+docker-compose run --rm \
+  ${COMPOSE_PROJECT_NAME}-node npm ${@}

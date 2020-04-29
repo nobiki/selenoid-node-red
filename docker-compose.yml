@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  selenoid-node-red-node:
+    container_name: selenoid-node-red-node
+    hostname: selenoid-node-red-node
+    image: selenoid-node-red-node
+    build:
+      context: .
+      dockerfile: node-red.Dockerfile
+    ports:
+      - 1880:1880
+    env_file: .env
